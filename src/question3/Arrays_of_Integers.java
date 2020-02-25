@@ -3,14 +3,6 @@ package question3;
 import java.util.Random;
 
 public class Arrays_of_Integers {
-
-	/*
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		
-
-	}
-	*/
 	
 	public static int[] getRandomArray(int n) {
 		Random rand = new Random();
