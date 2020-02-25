@@ -7,16 +7,8 @@ public class Arrays_of_Integers {
 	/*
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int[] size12 = getRandomArray(12);
 		
-		for (int i = 0; i < size12.length; i++)
-			System.out.print(size12[i] + " ");
 
-		System.out.println();
-		size12 = getSortedArray(12);
-		
-		for (int i = 0; i < size12.length; i++)
-			System.out.print(size12[i] + " ");
 	}
 	*/
 	
