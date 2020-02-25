@@ -187,6 +187,9 @@ public class Iterative_BST {
 				break;
 		}
 		
+		if (smallestNextPassed == number)
+			throw new Exception();
+		
 		if (current.rightChild == null)
 			return smallestNextPassed;
 		
@@ -229,6 +232,9 @@ public class Iterative_BST {
 			else
 				break;
 		}
+		
+		if (biggestPrevPassed == number)
+			throw new Exception();
 		
 		if (current.leftChild == null)
 			return biggestPrevPassed;

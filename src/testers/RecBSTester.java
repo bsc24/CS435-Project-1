@@ -62,17 +62,33 @@ public class RecBSTester {
 		BSTree.findNextRec(0);
 	}
 	
+	@Test(expected = Exception.class)
+	public void findNextOfLargestItemInRecTree() throws Exception {
+		Recursive_BST BSTree = new Recursive_BST();
+		BSTree.insertRec(1);
+		BSTree.findNextRec(1);
+	}
+	
 	
 	@Test(expected = Exception.class)
 	public void findPrevOfItemNotInRecTree() throws Exception {
 		Recursive_BST BSTree = new Recursive_BST();
 		BSTree.insertRec(1);
-		BSTree.findNextRec(0);
+		BSTree.findPrevRec(0);
 	}
 	
 	@Test(expected = Exception.class)
 	public void findPrevOfEmptyRecTree() throws Exception {
 		Recursive_BST BSTree = new Recursive_BST();
-		BSTree.findNextRec(0);
+		BSTree.findPrevRec(0);
 	}
+	
+	@Test(expected = Exception.class)
+	public void findPrevOfSmallestItemInRecTree() throws Exception {
+		Recursive_BST BSTree = new Recursive_BST();
+		BSTree.insertRec(1);
+		BSTree.findPrevRec(1);
+	}
+	
+	
 }

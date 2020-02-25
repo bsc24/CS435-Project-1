@@ -61,17 +61,31 @@ public class IterBSTester {
 		BSTree.findNextIter(0);
 	}
 	
+	@Test(expected = Exception.class)
+	public void findNextOfLargestItemInIterTree() throws Exception {
+		Iterative_BST BSTree = new Iterative_BST();
+		BSTree.insertIter(1);
+		BSTree.findNextIter(1);
+	}
+	
 	
 	@Test(expected = Exception.class)
 	public void findPrevOfItemNotInIterTree() throws Exception {
 		Iterative_BST BSTree = new Iterative_BST();
 		BSTree.insertIter(1);
-		BSTree.findNextIter(0);
+		BSTree.findPrevIter(0);
 	}
 	
 	@Test(expected = Exception.class)
 	public void findPrevOfEmptyIterTree() throws Exception {
 		Iterative_BST BSTree = new Iterative_BST();
-		BSTree.findNextIter(0);
+		BSTree.findPrevIter(0);
+	}
+	
+	@Test(expected = Exception.class)
+	public void findPrevOfSmallestItemInIterTree() throws Exception {
+		Iterative_BST BSTree = new Iterative_BST();
+		BSTree.insertIter(1);
+		BSTree.findPrevIter(1);
 	}
 }

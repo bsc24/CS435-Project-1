@@ -26,7 +26,7 @@ public class Sort_It {
 		if (current.leftChild != null)
 			index = inOrder(current.leftChild, retArr, index);
 		
-		retArr[index++] = current.value;
+		retArr[index++] = (int) current.value;
 		
 		if (current.rightChild != null)
 			index = inOrder(current.rightChild, retArr, index);
