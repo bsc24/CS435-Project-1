@@ -15,8 +15,8 @@ public class IterBSTester {
 		assertTrue(BSTree.insertIter(2));
 		assertFalse(BSTree.insertIter(2));
 		
-		assertEquals(BSTree.findMaxIter(), 2);
-		assertEquals(BSTree.findMinIter(), 2);
+		assertEquals(BSTree.findMaxIter(), 2, 0);
+		assertEquals(BSTree.findMinIter(), 2, 0);
 		
 		assertTrue(BSTree.insertIter(8));
 		assertTrue(BSTree.insertIter(14));
@@ -26,11 +26,11 @@ public class IterBSTester {
 		assertTrue(BSTree.insertIter(11));
 		assertTrue(BSTree.insertIter(18));
 
-		assertEquals(BSTree.findMaxIter(), 18);
-		assertEquals(BSTree.findMinIter(), 2);
+		assertEquals(BSTree.findMaxIter(), 18, 0);
+		assertEquals(BSTree.findMinIter(), 2, 0);
 		
-		assertEquals(BSTree.findPrevIter(10), 8);
-		assertEquals(BSTree.findNextIter(11), 12);
+		assertEquals(BSTree.findPrevIter(10), 8, 0);
+		assertEquals(BSTree.findNextIter(11), 12, 0);
 		
 		assertTrue(BSTree.deleteIter(14));
 		assertFalse(BSTree.deleteIter(14));
@@ -41,10 +41,10 @@ public class IterBSTester {
 		assertTrue(BSTree.deleteIter(8));
 		assertFalse(BSTree.deleteIter(8));
 
-		assertEquals(BSTree.findMaxIter(), 18);
+		assertEquals(BSTree.findMaxIter(), 18, 0);
 		assertTrue(BSTree.deleteIter(18));
 		assertFalse(BSTree.deleteIter(18));
-		assertEquals(BSTree.findMaxIter(), 13);
+		assertEquals(BSTree.findMaxIter(), 13, 0);
 		
 	}
 

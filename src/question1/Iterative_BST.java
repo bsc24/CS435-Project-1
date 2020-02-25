@@ -22,7 +22,7 @@ public class Iterative_BST {
 	}
 	
 	
-	public boolean has(int number) {
+	public boolean has(float number) {
 		Node current = root;
 		while (true) {
 			if (current == null)
@@ -38,7 +38,7 @@ public class Iterative_BST {
 	
 	
 	// Done
-	public boolean insertIter(int number) {
+	public boolean insertIter(float number) {
 		// Return true on successful insertion, return false when failing to insert
 		// Unlike with the recursive version, I was able to leave out whether the tree had the value already
 		
@@ -75,7 +75,7 @@ public class Iterative_BST {
 	}
 	
 	
-	public boolean deleteIter(int number){
+	public boolean deleteIter(float number){
 		if (root == null) {
 			System.out.println("No values in the BST.");
 			return false;
@@ -147,7 +147,7 @@ public class Iterative_BST {
 	}
 	
 	// Modified findMinIter for use in delete method
-	private int findMinOfNode(Node current){
+	private float findMinOfNode(Node current){
 		while (current.leftChild != null)
 			current = current.leftChild;
 		
@@ -156,14 +156,14 @@ public class Iterative_BST {
 	
 	
 	// Done
-	public int findNextIter(int number) throws Exception {
+	public float findNextIter(float number) throws Exception {
 		if (root == null) {
 			System.out.println("No values in the BST.");
 			throw new Exception();
 		}
 		
 		Node current = root;
-		int smallestNextPassed = current.value;
+		float smallestNextPassed = current.value;
 		
 		while (true) {
 			if (number > current.value) {
@@ -199,14 +199,14 @@ public class Iterative_BST {
 	
 	
 	// Done
-	public int findPrevIter(int number) throws Exception {
+	public float findPrevIter(float number) throws Exception {
 		if (root == null) {
 			System.out.println("No values in the BST.");
 			throw new Exception();
 		}
 		
 		Node current = root;
-		int biggestPrevPassed = current.value;
+		float biggestPrevPassed = current.value;
 		
 		while (true) {
 			if (number > current.value) {
@@ -242,7 +242,7 @@ public class Iterative_BST {
 	
 	
 	// Done
-	public int findMinIter() throws Exception {
+	public float findMinIter() throws Exception {
 		if (root == null) {
 			System.out.println("No values in the BST.");
 			throw new Exception();
@@ -257,7 +257,7 @@ public class Iterative_BST {
 	
 	
 	// Done
-	public int findMaxIter() throws Exception {
+	public float findMaxIter() throws Exception {
 		if (root == null) {
 			System.out.println("No values in the BST.");
 			throw new Exception();	// Ideally, I would throw an exception here instead.

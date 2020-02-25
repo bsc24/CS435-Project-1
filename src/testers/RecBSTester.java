@@ -19,29 +19,29 @@ public class RecBSTester {
 		assertTrue(BSTree.insertRec(3));
 		assertTrue(BSTree.deleteRec(3));
 		
-		assertEquals(BSTree.findMaxRec(), 2);
-		assertEquals(BSTree.findMinRec(), 2);
+		assertEquals(BSTree.findMaxRec(), 2, 0);
+		assertEquals(BSTree.findMinRec(), 2, 0);
 		
 		assertTrue(BSTree.insertRec(1));		// insert 1
-		assertEquals(BSTree.findMinRec(), 1);
-		assertEquals(BSTree.findMaxRec(), 2);
+		assertEquals(BSTree.findMinRec(), 1, 0);
+		assertEquals(BSTree.findMaxRec(), 2, 0);
 		
 		assertTrue(BSTree.insertRec(9));		// insert 9
-		assertEquals(BSTree.findMaxRec(), 9);
-		assertEquals(BSTree.findMinRec(), 1);
+		assertEquals(BSTree.findMaxRec(), 9, 0);
+		assertEquals(BSTree.findMinRec(), 1, 0);
 		
-		assertEquals(BSTree.findNextRec(2), 9);
+		assertEquals(BSTree.findNextRec(2), 9, 0);
 		
 		assertTrue(BSTree.insertRec(7));		// insert 7
 		assertTrue(BSTree.insertRec(14));		// insert 14
-		assertEquals(BSTree.findNextRec(7), 9);
-		assertEquals(BSTree.findPrevRec(7), 2);
+		assertEquals(BSTree.findNextRec(7), 9, 0);
+		assertEquals(BSTree.findPrevRec(7), 2, 0);
 		
-		assertEquals(BSTree.findPrevRec(2), 1);
+		assertEquals(BSTree.findPrevRec(2), 1, 0);
 		
 		assertTrue(BSTree.deleteRec(2));		// remove 2
 		assertFalse(BSTree.deleteRec(2));
-		assertEquals(BSTree.getRoot().value, 7);
+		assertEquals(BSTree.getRoot().value, 7, 0);
 		
 		assertTrue(BSTree.insertRec(2));		// insert 2
 		assertTrue(BSTree.insertRec(0));		// insert 0

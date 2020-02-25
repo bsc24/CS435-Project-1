@@ -22,11 +22,11 @@ public class Recursive_BST {
 	}
 	
 	
-	public boolean has(int number) {
+	public boolean has(float number) {
 		return hasHelper(number, root);
 	}
 	
-	private boolean hasHelper(int number, Node current) {
+	private boolean hasHelper(float number, Node current) {
 		if (current == null)
 			return false;
 		else if (number < current.value)
@@ -41,7 +41,7 @@ public class Recursive_BST {
 	// ASSIGNMENT METHODS
 	
 	// Done
-	public boolean insertRec(int number) {
+	public boolean insertRec(float number) {
 		// Return true on successful insertion, return false when failing to insert
 		
 		if (this.has(number))
@@ -52,7 +52,7 @@ public class Recursive_BST {
 		}
 	}
 	
-	private Node insertRecHelper(int number, Node current) {
+	private Node insertRecHelper(float number, Node current) {
 		if (current == null) {
 			size++;
 			return new Node(number);
@@ -67,7 +67,7 @@ public class Recursive_BST {
 	
 	
 	// Done
-	public boolean deleteRec(int number) {
+	public boolean deleteRec(float number) {
 		// Return true on successful deletion, return false when failing to delete
 		
 		if (!this.has(number))
@@ -77,7 +77,7 @@ public class Recursive_BST {
 		return true;
 	}
 	
-	public Node deleteRecHelper(int number, Node current) {
+	public Node deleteRecHelper(float number, Node current) {
 		if (number < current.value)
 			current.leftChild = deleteRecHelper(number, current.leftChild);
 		else if (number > current.value)
@@ -100,19 +100,19 @@ public class Recursive_BST {
 	
 	
 	// Done
-	public int findNextRec(int number) throws Exception {
-		int holder = findNextRecHelper(number, root);
+	public float findNextRec(float number) throws Exception {
+		float holder = findNextRecHelper(number, root);
 		if (holder == number)
 			throw new Exception();
 		else
 			return holder;
 	}
 	
-	private int findNextRecHelper(int number, Node current) throws Exception {
+	private float findNextRecHelper(float number, Node current) throws Exception {
 		if (current == null)
 			throw new Exception();
 		
-		int holder;
+		float holder;
 		
 		if (number < current.value) {
 			holder = findNextRecHelper(number, current.leftChild);
@@ -135,19 +135,19 @@ public class Recursive_BST {
 	
 	
 	// Done
-	public int findPrevRec(int number) throws Exception {
-		int holder = findPrevRecHelper(number, root);
+	public float findPrevRec(float number) throws Exception {
+		float holder = findPrevRecHelper(number, root);
 		if (holder == number)
 			throw new Exception();
 		else
 			return holder;
 	}
 	
-	private int findPrevRecHelper(int number, Node current) throws Exception {
+	private float findPrevRecHelper(float number, Node current) throws Exception {
 		if (current == null)
 			throw new Exception();
 		
-		int holder;
+		float holder;
 		
 		if (number < current.value) {
 			holder = findPrevRecHelper(number, current.leftChild);
@@ -170,7 +170,7 @@ public class Recursive_BST {
 	
 	
 	// Done
-	public int findMinRec() throws Exception {
+	public float findMinRec() throws Exception {
 		if (root == null) {
 			System.out.println("No values in the BST.");
 			throw new Exception();
@@ -179,7 +179,7 @@ public class Recursive_BST {
 			return findMinRecHelper(root);
 	}
 	
-	private int findMinRecHelper(Node current) {
+	private float findMinRecHelper(Node current) {
 		if (current.leftChild == null)
 			return current.value;
 		else
@@ -188,7 +188,7 @@ public class Recursive_BST {
 	
 	
 	// Done
-	public int findMaxRec() throws Exception {
+	public float findMaxRec() throws Exception {
 		if (root == null) {
 			System.out.println("No values in the BST.");
 			throw new Exception();
@@ -197,7 +197,7 @@ public class Recursive_BST {
 			return findMaxRecHelper(root);
 	}
 	
-	private int findMaxRecHelper(Node current) {
+	private float findMaxRecHelper(Node current) {
 		if (current.rightChild == null)
 			return current.value;
 		else

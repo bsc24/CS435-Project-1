@@ -2,12 +2,12 @@ package question1;
 
 public class Node {
 	
-	public int value;
+	public float value;
 	public Node leftChild;
 	public Node rightChild;
 	
 	// Constructor
-	public Node(int number) {
+	public Node(float number) {
 		value = number;
 	}
 	
