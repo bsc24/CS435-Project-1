@@ -2,7 +2,7 @@ package testers;
 
 import org.junit.Test;
 
-import question3.Arrays_of_Integers;
+import question_3.Arrays_of_Integers;
 
 public class Array_of_Ints_Tester {
 

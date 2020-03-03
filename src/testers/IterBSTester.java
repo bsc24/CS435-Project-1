@@ -6,7 +6,7 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
-import question1.Iterative_BST;
+import question_1.Iterative_BST;
 
 public class IterBSTester {
 	@Test

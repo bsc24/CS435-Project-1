@@ -4,7 +4,7 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import question1.Recursive_BST;
+import question_1.Recursive_BST;
 
 public class RecBSTester {
 

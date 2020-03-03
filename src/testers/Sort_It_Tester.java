@@ -5,7 +5,7 @@ import java.util.Arrays;
 
 import org.junit.Test;
 
-import question2.Sort_It;
+import question_2.Sort_It;
 
 public class Sort_It_Tester {
 
