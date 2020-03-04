@@ -1,3 +1,6 @@
 # CS435-Project-1
 
-The contents of the folder "CS 435 Project 1" should be the same as the contents of the bin and src folders
+CS 435, Section 002
+
+Brandon Chin's code for Project 1
+Student ID 31437117
