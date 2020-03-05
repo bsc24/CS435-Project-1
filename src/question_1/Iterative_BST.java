@@ -149,6 +149,7 @@ public class Iterative_BST {
 					whichChild = 2;
 					continue;
 				}
+				size--;
 				return true;
 			}
 		}

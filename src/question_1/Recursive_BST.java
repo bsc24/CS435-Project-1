@@ -74,6 +74,7 @@ public class Recursive_BST {
 			return false;
 		
 		root = deleteRecHelper(number, root);
+		size--;
 		return true;
 	}
 	

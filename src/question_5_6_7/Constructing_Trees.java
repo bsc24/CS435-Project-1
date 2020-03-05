@@ -20,12 +20,13 @@ public class Constructing_Trees {
 		System.out.println("Finished");
 
 		System.out.print("Starting part C... ");
-		startTime = System.currentTimeMillis();
 		Iterative_BST iterBSTree = createIterBST(randArray);
-		BSTime = System.currentTimeMillis();
 		Iterative_AVL iterAVLee = createIterAVL(randArray);
-		AVLime = System.currentTimeMillis();
 		System.out.println("Finished");
+		
+		// Clearing out memory
+		recBSTree = null;
+		recAVLee = null;
 		
 		
 		System.out.println("\nQuestion 6");
@@ -39,14 +40,28 @@ public class Constructing_Trees {
 		System.out.println("Finished");
 		System.out.println("\tLevels traversed by BST: " + iterBSTreeSorted.getLevelsTraversed());
 		System.out.println("\tLevels traversed by AVL: " + iterAVLeeSorted.getLevelsTraversed());
+
+		// Clearing out memory
+		iterBSTreeSorted = null;
+		iterAVLeeSorted = null;
 		
 		
 		System.out.println("\nQuestion 7");
-		System.out.println("Part A");
+		System.out.println("Starting part A...");
+		startTime = System.currentTimeMillis();
+		iterBSTree = createIterBST(randArray);
+		for (int i = 0; i < numElements; i++)
+			iterBSTree.deleteIter(randArray[i]);
+		BSTime = System.currentTimeMillis();
+		
+		iterAVLee = createIterAVL(randArray);
+		for (int i = 0; i < numElements; i++)
+			iterAVLee.deleteIter(randArray[i]);
+		AVLime = System.currentTimeMillis();
 		AVLime -= BSTime;
 		BSTime -= startTime;
-		System.out.println("\tTime taken by BST: " + BSTime);
-		System.out.println("\tTime taken by AVL: " + AVLime);
+		System.out.println("\tTime taken by BST: " + BSTime + "ms");
+		System.out.println("\tTime taken by AVL: " + AVLime + "ms");
 	}
 	
 	

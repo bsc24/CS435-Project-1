@@ -254,6 +254,7 @@ public class Iterative_AVL {
 		nodeStack.removeFirst();
 		
 		root = balance(nodeStack);
+		size--;
 		return true;
 	}
 	

@@ -140,6 +140,7 @@ public class Recursive_AVL {
 		
 		root = deleteRecHelper(number, root);
 		root = balance(root);
+		size--;
 		return true;
 	}
 	
